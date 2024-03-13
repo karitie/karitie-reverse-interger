@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reverse Integer</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <!-- Write a program that takes an interger as input and returns an interger 
+    with reversed digit ordering. -->
+<h1>Reverse Integer</h1>
+<input type="number" id="inputNumber" placeholder="Enter an integer">
+<button onclick="reverseInteger()">Reverse</button>
+<script>
+  const reverseInteger = () => {
+    const inputNumber = document.getElementById('inputNumber').value;
+    if (inputNumber === '') {
+      console.log('Please enter an integer.');
+      return;
+    }
+    const reversedNumber = parseInt(inputNumber.toString().split('').reverse().join(''));
+    console.log('Reversed Integer:', reversedNumber);
+  };
+</script>
+</body>
+</html>
